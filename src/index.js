@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 ReactDOM.render(
-    <App />
+    React.createElement('button', {
+      onClick: () => console.log('Click!')
+    }, 'Press me!'),
   document.getElementById('root')
 );
 
