@@ -1,23 +1,18 @@
 import React, { useState } from 'react';
 import ClassCounter from './components/ClassCounter';
 import Counter from "./components/Counter";
+import PostItem from './components/PostItem';
 import './styles/App.css';
 function App() {
   const [value, setValue] = useState('Text in input')
 
   return (
     <div className="App">
-      <div className="post">
-        <div className="post__content">
-          <strong>1. JavaScript</strong>
-          <div>
-            JavaScript - язык программирования
-          </div>
-        </div>
-        <div className="post__btn">
-          <button>Удалить</button>
-        </div>
-      </div>
+      <PostItem post={{id: 1, title: 'Javascript', body: 'Description'}}/>
+      <PostItem post={{id: 2, title: 'Javascript', body: 'Description'}}/>
+      <PostItem post={{id: 3, title: 'Javascript', body: 'Description'}}/>
+      <PostItem post={{id: 4, title: 'Javascript', body: 'Description'}}/>
+      <PostItem post={{id: 5, title: 'Javascript', body: 'Description'}}/>
     </div>
   );
 }
